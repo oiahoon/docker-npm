@@ -23,6 +23,16 @@ services:
     links:
       - db
 
+  pma:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8181:80
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=root
+
   db:
     image: mysql:5.7
     restart: always

@@ -28,8 +28,9 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
+      - MYSQL_USER=mysql
       - MYSQL_PASSWORD=root
     volumes:
       - "./data/db/mysql:/var/lib/mysql"
       - "./etc/mysql/my.cnf:/etc/mysql/my.cnf"
+

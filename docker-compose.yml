@@ -32,6 +32,8 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=mysql
       - MYSQL_PASSWORD=root
+    links:
+      - db
 
   db:
     image: mysql:5.7
